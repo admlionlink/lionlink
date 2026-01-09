@@ -509,11 +509,54 @@ const LionLinkLanding = () => {
 
           <section id="metodo" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center max-w-3xl mx-auto mb-16"><h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-4 font-title">O problema da "Agência Tradicional"</h2><p className="text-lg text-gray-600 font-body">A maioria das agências faz posts bonitinhos que não vendem. Nós resolvemos os 3 pilares reais que fazem o seu telefone tocar.</p></div>
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6 font-title">O problema da “Agência Tradicional”</h2>
+                <div className="text-lg text-gray-600 font-body space-y-4">
+                  <p><strong>Instagram com post bonitinho não paga boleto.</strong></p>
+                  <p>Se você não tiver <strong>Google forte, anúncio bem feito e uma página que vende,</strong> você até aparece… mas <strong>não fecha.</strong></p>
+                  <p>A Lion Link resolve isso com <strong>3 pilares</strong> pra gerar <strong>resultado: novos clientes, novas vendas e crescimento todo mês.</strong></p>
+                </div>
+              </div>
               <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-[#f5d10d] hover:shadow-lg transition-all group"><div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 group-hover:bg-[#f5d10d] group-hover:text-[#020202] transition-colors text-[#d8b10e]"><Globe size={32} /></div><h3 className="text-xl font-bold text-[#020202] mb-3 font-title">Presença de Autoridade</h3><p className="text-gray-600 mb-4 font-body">Criamos sites rápidos (Landing Pages) que convertem visitantes em clientes no WhatsApp, não apenas cartões de visita digitais.</p><ul className="text-sm text-gray-500 space-y-2 font-body font-medium"><li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-green-500"/> Site Otimizado (Lovable)</li><li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-green-500"/> Google Meu Negócio 100%</li></ul></div>
-                <div className="bg-[#020202] p-8 rounded-2xl border border-[#181818] shadow-xl relative overflow-hidden transform md:-translate-y-4"><div className="absolute top-0 right-0 bg-[#f5d10d] text-[#020202] text-xs font-bold px-3 py-1 rounded-bl-lg font-title tracking-wider">NOSSO SEGREDO</div><div className="w-14 h-14 bg-[#f5d10d] rounded-xl flex items-center justify-center shadow-lg mb-6 text-[#020202]"><Camera size={32} /></div><h3 className="text-xl font-bold text-white mb-3 font-title">Audiovisual Presencial</h3><p className="text-gray-300 mb-4 font-body">Não usamos fotos de banco de imagem. Nós vamos até sua empresa gravar vídeos e tirar fotos reais. Isso gera confiança imediata.</p><ul className="text-sm text-gray-400 space-y-2 font-body font-medium"><li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#f5d10d]"/> Fotos Profissionais</li><li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#f5d10d]"/> Vídeos para Reels/TikTok</li></ul></div>
-                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-[#f5d10d] hover:shadow-lg transition-all group"><div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 group-hover:bg-[#f5d10d] group-hover:text-[#020202] transition-colors text-[#d8b10e]"><TrendingUp size={32} /></div><h3 className="text-xl font-bold text-[#020202] mb-3 font-title">Tráfego Local</h3><p className="text-gray-600 mb-4 font-body">Colocamos sua marca na frente de quem está procurando seu serviço AGORA no Google ou rolando o feed no Instagram.</p><ul className="text-sm text-gray-500 space-y-2 font-body font-medium"><li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-green-500"/> Google Ads (Fundo de Funil)</li><li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-green-500"/> Meta Ads (Visibilidade)</li></ul></div>
+                {/* Card 1: Google Forte */}
+                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-[#f5d10d] hover:shadow-lg transition-all group">
+                  <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 group-hover:bg-[#f5d10d] group-hover:text-[#020202] transition-colors text-[#d8b10e]">
+                    <MapPin size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#020202] mb-3 font-title">Google Forte</h3>
+                  <p className="text-gray-600 mb-4 font-body">Quem não aparece no Google, perde cliente pro concorrente.</p>
+                  <ul className="text-sm text-gray-500 space-y-2 font-body font-medium">
+                    <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-green-500"/> Google Business configurado e otimizado</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-green-500"/> Fotos profissionais e estratégicas</li>
+                  </ul>
+                </div>
+
+                {/* Card 2: Anúncios Que Vendem (Nosso Segredo) */}
+                <div className="bg-[#020202] p-8 rounded-2xl border border-[#181818] shadow-xl relative overflow-hidden transform md:-translate-y-4">
+                  <div className="absolute top-0 right-0 bg-[#f5d10d] text-[#020202] text-xs font-bold px-3 py-1 rounded-bl-lg font-title tracking-wider">NOSSO SEGREDO</div>
+                  <div className="w-14 h-14 bg-[#f5d10d] rounded-xl flex items-center justify-center shadow-lg mb-6 text-[#020202]">
+                    <Megaphone size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 font-title">Anúncios Que Vendem</h3>
+                  <p className="text-gray-300 mb-4 font-body">Sem anúncio bem feito, você depende de sorte e indicação.</p>
+                  <ul className="text-sm text-gray-400 space-y-2 font-body font-medium">
+                    <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#f5d10d]"/> Anúncios no Instagram/Facebook</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#f5d10d]"/> Anúncios no Google/YouTube</li>
+                  </ul>
+                </div>
+
+                {/* Card 3: Site Profissional */}
+                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-[#f5d10d] hover:shadow-lg transition-all group">
+                  <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 group-hover:bg-[#f5d10d] group-hover:text-[#020202] transition-colors text-[#d8b10e]">
+                    <Layout size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#020202] mb-3 font-title">Site Profissional</h3>
+                  <p className="text-gray-600 mb-4 font-body">Não adianta só ter um site. Precisa ser profissional e feito pra converter visitante em cliente.</p>
+                  <ul className="text-sm text-gray-500 space-y-2 font-body font-medium">
+                    <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-green-500"/> Página que leva o cliente pro WhatsApp</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-green-500"/> Textos persuasivos focados em conversão</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
