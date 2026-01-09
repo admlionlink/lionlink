@@ -137,7 +137,7 @@ const QrCodeModal = ({ onClose, link }) => {
         
         <div className="bg-white p-2 rounded-xl mb-6 inline-block border-2 border-gray-100 shadow-inner">
           <img 
-            src="https://dotoqueaoextase.com.br/img/qrcode.jpg" 
+            src="https://lionlink-nine.vercel.app/qrcode.jpg" 
             alt="QR Code WhatsApp" 
             className="w-48 h-48 object-contain" 
           />
@@ -305,6 +305,18 @@ const LionLinkLanding = () => {
   const [isQrOpen, setIsQrOpen] = useState(false);
   const [qrLink, setQrLink] = useState('');
 
+  // Effect to set the Favicon
+  useEffect(() => {
+    const setFavicon = () => {
+      const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+      link.type = 'image/svg+xml';
+      link.rel = 'icon';
+      link.href = 'https://lionlink-nine.vercel.app/lionicon.svg';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    };
+    setFavicon();
+  }, []);
+
   const handleContactChange = (e) => {
     let { name, value } = e.target;
     
@@ -409,7 +421,7 @@ const LionLinkLanding = () => {
       title: "Clínica Shekinah",
       tag: "SAÚDE",
       summary: "Do zero à lotação. Estruturamos toda a presença digital e captação, preenchendo as vagas da residência.",
-      img: "https://dotoqueaoextase.com.br/wp-content/uploads/2026/01/Clinica-Shekinah.webp",
+      img: "https://lionlink-nine.vercel.app/Clinica-Shekinah.webp",
       siteUrl: "https://clinicashekinah.com.br",
       challenge: "A clínica precisava inaugurar sua presença digital do zero. Não havia site, redes sociais ou identidade visual consolidada, e o objetivo principal era preencher as vagas da residência terapêutica rapidamente.",
       resultText: "Em poucos meses, a casa alcançou sua lotação máxima através das campanhas de Google Ads e da credibilidade passada pelo novo site e materiais institucionais.",
@@ -431,7 +443,7 @@ const LionLinkLanding = () => {
       title: "Diferencial Contabilidade",
       tag: "SERVIÇOS",
       summary: "Reposicionamento total. Nova identidade visual e site moderno que atraíram uma carteira de clientes mais qualificada.",
-      img: "https://dotoqueaoextase.com.br/wp-content/uploads/2026/01/Diferencial-Contabilidade.webp",
+      img: "https://lionlink-nine.vercel.app/Diferencial-Contabilidade.webp",
       siteUrl: "https://diferencialcontabilidade.com.br",
       challenge: "A Diferencial Contabilidade tinha uma carteira sólida, mas sua imagem não refletia a qualidade do serviço. O desafio era modernizar a marca e atrair clientes maiores através do digital, saindo da guerra de preços.",
       resultText: "O rebranding completo elevou o nível do jogo. Com a nova identidade e um site de alta performance, a percepção de valor aumentou drasticamente. As campanhas de tráfego trouxeram leads qualificados, renovando a base de clientes.",
@@ -453,7 +465,7 @@ const LionLinkLanding = () => {
       title: "Dr. André Arouca",
       tag: "SAÚDE",
       summary: "Expansão para o digital. Implementamos um funil de captação que resultou em agenda lotada de atendimentos online.",
-      img: "https://dotoqueaoextase.com.br/wp-content/uploads/2026/01/Psicologo-Andre-Arouca.webp",
+      img: "https://lionlink-nine.vercel.app/Psicologo-Andre-Arouca.webp",
       siteUrl: "https://andrearouca.com.br",
       challenge: "O Dr. André é um excelente profissional, mas sua agenda dependia exclusivamente do 'boca a boca' local e atendimentos presenciais. O objetivo era romper a barreira geográfica e lotar a agenda com atendimentos online, mantendo o valor da consulta.",
       resultText: "Criamos um posicionamento de autoridade e um funil de vendas direto. O resultado foi imediato: a procura por terapia online aumentou 300% e hoje ele tem liberdade geográfica para atender de onde quiser, com a agenda fechada.",
@@ -531,7 +543,7 @@ const LionLinkLanding = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             <div className="flex items-center cursor-pointer" onClick={() => setCurrentView('home')}>
-              <img src="https://dotoqueaoextase.com.br/wp-content/uploads/2026/01/Logo-colorido.png" alt="Lion Link Logo" className="h-16 w-auto object-contain" />
+              <img src="https://lionlink-nine.vercel.app/Logo-colorido.png" alt="Lion Link Logo" className="h-16 w-auto object-contain" />
             </div>
             <div className="hidden md:flex items-center space-x-8 font-body">
               <button onClick={() => scrollToSection('metodo')} className="text-[#181818] hover:text-[#d8b10e] font-medium transition-colors">Nosso Método</button>
@@ -588,7 +600,7 @@ const LionLinkLanding = () => {
                 </div>
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-r from-[#f5d10d] to-[#d8b10e] rounded-2xl blur-2xl opacity-20"></div>
-                  <img src="https://dotoqueaoextase.com.br/img/lion%20link%20-%20homem%20ao%20celular.webp" alt="Homem ao celular - Lion Link" className="relative rounded-2xl shadow-2xl border-4 border-white w-full object-cover h-[500px]" />
+                  <img src="https://lionlink-nine.vercel.app/lion%20link%20-%20homem%20ao%20celular.webp" alt="Homem ao celular - Lion Link" className="relative rounded-2xl shadow-2xl border-4 border-white w-full object-cover h-[500px]" />
                   <div className="absolute -bottom-8 -left-8 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-4 animate-bounce-slow font-title"><div className="bg-green-100 p-3 rounded-full text-green-600"><TrendingUp size={24} /></div><div><p className="text-xs text-gray-500 font-bold uppercase tracking-wider">Resultados</p><p className="text-lg font-bold text-[#020202]">+145% Leads/Mês</p></div></div>
                   <div className="absolute top-10 -right-8 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-4 animate-bounce-delayed hidden md:flex font-title"><div className="bg-[#f5d10d]/20 p-3 rounded-full text-[#020202]"><MapPin size={24} /></div><div><p className="text-xs text-gray-500 font-bold uppercase tracking-wider">Google Maps</p><p className="text-lg font-bold text-[#020202]">1º Lugar Local</p></div></div>
                 </div>
@@ -677,9 +689,9 @@ const LionLinkLanding = () => {
                 {/* Botão removido conforme solicitado */}
               </div>
               <div className="grid md:grid-cols-3 gap-6">
-                <div onClick={() => openCaseStudy('shekinah')} className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300"><div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div><img src="https://dotoqueaoextase.com.br/wp-content/uploads/2026/01/Clinica-Shekinah.webp" alt="Clínica Shekinah" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"/><div className="absolute bottom-6 left-6 z-20 text-white"><p className="text-xs font-bold bg-[#f5d10d] text-[#020202] px-2 py-1 rounded mb-2 w-fit font-title">SAÚDE</p><h3 className="text-xl font-bold font-title flex items-center gap-2">Clínica Shekinah <ArrowRight size={16} className="text-[#f5d10d]"/></h3><p className="text-sm text-gray-200 mt-1 font-body">Do zero à lotação. Estruturamos toda a presença digital...</p></div></div>
-                <div onClick={() => openCaseStudy('diferencial')} className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300"><div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div><img src="https://dotoqueaoextase.com.br/wp-content/uploads/2026/01/Diferencial-Contabilidade.webp" alt="Diferencial Contabilidade" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"/><div className="absolute bottom-6 left-6 z-20 text-white"><p className="text-xs font-bold bg-blue-600 px-2 py-1 rounded mb-2 w-fit font-title">SERVIÇOS</p><h3 className="text-xl font-bold font-title flex items-center gap-2">Diferencial Contabilidade <ArrowRight size={16} className="text-[#f5d10d]"/></h3><p className="text-sm text-gray-200 mt-1 font-body">Reposicionamento total. Nova identidade visual e site moderno...</p></div></div>
-                <div onClick={() => openCaseStudy('arouca')} className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300"><div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div><img src="https://dotoqueaoextase.com.br/wp-content/uploads/2026/01/Psicologo-Andre-Arouca.webp" alt="Dr. André Arouca" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"/><div className="absolute bottom-6 left-6 z-20 text-white"><p className="text-xs font-bold bg-green-600 px-2 py-1 rounded mb-2 w-fit font-title">SAÚDE</p><h3 className="text-xl font-bold font-title">Dr. André Arouca <ArrowRight size={16} className="text-[#f5d10d]"/></h3><p className="text-sm text-gray-200 mt-1 font-body">Expansão para o digital. Implementamos um funil de captação...</p></div></div>
+                <div onClick={() => openCaseStudy('shekinah')} className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300"><div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div><img src="https://lionlink-nine.vercel.app/Clinica-Shekinah.webp" alt="Clínica Shekinah" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"/><div className="absolute bottom-6 left-6 z-20 text-white"><p className="text-xs font-bold bg-[#f5d10d] text-[#020202] px-2 py-1 rounded mb-2 w-fit font-title">SAÚDE</p><h3 className="text-xl font-bold font-title flex items-center gap-2">Clínica Shekinah <ArrowRight size={16} className="text-[#f5d10d]"/></h3><p className="text-sm text-gray-200 mt-1 font-body">Do zero à lotação. Estruturamos toda a presença digital...</p></div></div>
+                <div onClick={() => openCaseStudy('diferencial')} className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300"><div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div><img src="https://lionlink-nine.vercel.app/Diferencial-Contabilidade.webp" alt="Diferencial Contabilidade" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"/><div className="absolute bottom-6 left-6 z-20 text-white"><p className="text-xs font-bold bg-blue-600 px-2 py-1 rounded mb-2 w-fit font-title">SERVIÇOS</p><h3 className="text-xl font-bold font-title flex items-center gap-2">Diferencial Contabilidade <ArrowRight size={16} className="text-[#f5d10d]"/></h3><p className="text-sm text-gray-200 mt-1 font-body">Reposicionamento total. Nova identidade visual e site moderno...</p></div></div>
+                <div onClick={() => openCaseStudy('arouca')} className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300"><div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div><img src="https://lionlink-nine.vercel.app/Psicologo-Andre-Arouca.webp" alt="Dr. André Arouca" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"/><div className="absolute bottom-6 left-6 z-20 text-white"><p className="text-xs font-bold bg-green-600 px-2 py-1 rounded mb-2 w-fit font-title">SAÚDE</p><h3 className="text-xl font-bold font-title">Dr. André Arouca <ArrowRight size={16} className="text-[#f5d10d]"/></h3><p className="text-sm text-gray-200 mt-1 font-body">Expansão para o digital. Implementamos um funil de captação...</p></div></div>
               </div>
             </div>
           </section>
@@ -698,7 +710,7 @@ const LionLinkLanding = () => {
                 </div>
               </div>
               <div className="border-t border-[#333] pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm font-body">
-                <div className="flex items-center gap-3 mb-4 md:mb-0"><img src="https://dotoqueaoextase.com.br/wp-content/uploads/2026/01/Logo-Branco.png" alt="Lion Link Logo" className="h-12 w-auto object-contain" /></div>
+                <div className="flex items-center gap-3 mb-4 md:mb-0"><img src="https://lionlink-nine.vercel.app/Logo-Branco.png" alt="Lion Link Logo" className="h-12 w-auto object-contain" /></div>
                 <div className="flex gap-6">
                   <a href="https://www.instagram.com/lionlinkbr/" target="_blank" rel="nofollow" className="hover:text-[#f5d10d] transition-colors">Instagram</a>
                   <a href="#" className="hover:text-[#f5d10d] transition-colors">LinkedIn</a>
