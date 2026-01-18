@@ -444,7 +444,7 @@ const LionLinkLanding = () => {
       tag: "SERVIÇOS",
       summary: "Reposicionamento total. Nova identidade visual e site moderno que atraíram uma carteira de clientes mais qualificada.",
       img: "https://lionlink-nine.vercel.app/Diferencial-Contabilidade.webp",
-      siteUrl: "https://diferencialcontabilidade.com.br",
+      siteUrl: "https://dcontabil.com",
       challenge: "A Diferencial Contabilidade tinha uma carteira sólida, mas sua imagem não refletia a qualidade do serviço. O desafio era modernizar a marca e atrair clientes maiores através do digital, saindo da guerra de preços.",
       resultText: "O rebranding completo elevou o nível do jogo. Com a nova identidade e um site de alta performance, a percepção de valor aumentou drasticamente. As campanhas de tráfego trouxeram leads qualificados, renovando a base de clientes.",
       services: [
@@ -466,7 +466,7 @@ const LionLinkLanding = () => {
       tag: "SAÚDE",
       summary: "Expansão para o digital. Implementamos um funil de captação que resultou em agenda lotada de atendimentos online.",
       img: "https://lionlink-nine.vercel.app/Psicologo-Andre-Arouca.webp",
-      siteUrl: "https://andrearouca.com.br",
+      siteUrl: "https://andrearouca.com",
       challenge: "O Dr. André é um excelente profissional, mas sua agenda dependia exclusivamente do 'boca a boca' local e atendimentos presenciais. O objetivo era romper a barreira geográfica e lotar a agenda com atendimentos online, mantendo o valor da consulta.",
       resultText: "Criamos um posicionamento de autoridade e um funil de vendas direto. O resultado foi imediato: a procura por terapia online aumentou 300% e hoje ele tem liberdade geográfica para atender de onde quiser, com a agenda fechada.",
       services: [
