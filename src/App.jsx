@@ -8,9 +8,6 @@ import {
   Menu,
   X,
   Target,
-  Loader2,
-  Check,
-  AlertCircle,
   MessageCircle,
   Database,
   Settings,
@@ -26,21 +23,12 @@ import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
 import CaseStudyPage from './components/CaseStudyPage';
 import portfolioItems from './data/portfolioItems';
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_KEY;
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const EMAILJS_USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER;
 
 const LionLinkLanding = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentView, setCurrentView] = useState('home');
   const [selectedCase, setSelectedCase] = useState(null);
-  const [contactForm, setContactForm] = useState({ name: '', whatsapp: '' });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [submitError, setSubmitError] = useState(null);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const [isQrOpen, setIsQrOpen] = useState(false);
   const [qrLink, setQrLink] = useState('');
@@ -53,73 +41,6 @@ const LionLinkLanding = () => {
     link.href = 'https://lionlink-nine.vercel.app/lionicon.svg';
     if (!existing) document.head.appendChild(link);
   }, []);
-
-  const handleContactChange = (e) => {
-    let { name, value } = e.target;
-    if (name === 'whatsapp') {
-      value = value.replace(/\D/g, '');
-      if (value.length > 11) value = value.slice(0, 11);
-      value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
-      value = value.replace(/(\d)(\d{4})$/, '$1-$2');
-    }
-    setContactForm(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleContactSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitError(null);
-
-    const leadData = {
-      name: contactForm.name,
-      whatsapp: contactForm.whatsapp,
-      origin: "Landing Page Lion Link",
-    };
-
-    try {
-      const responseSupabase = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
-        method: 'POST',
-        headers: {
-          'apikey': SUPABASE_KEY,
-          'Authorization': `Bearer ${SUPABASE_KEY}`,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal',
-        },
-        body: JSON.stringify({ name: leadData.name, whatsapp: leadData.whatsapp }),
-      });
-
-      if (!responseSupabase.ok) console.warn("Aviso: Falha ao salvar no Supabase, tentando EmailJS.");
-
-      const emailJsResponse = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          service_id: EMAILJS_SERVICE_ID,
-          template_id: EMAILJS_TEMPLATE_ID,
-          user_id: EMAILJS_USER_ID,
-          template_params: {
-            name: leadData.name,
-            whatsapp: leadData.whatsapp,
-            origin: leadData.origin,
-          },
-        }),
-      });
-
-      if (!emailJsResponse.ok && !responseSupabase.ok) {
-        const errorText = await emailJsResponse.text();
-        throw new Error(`Erro ao enviar: ${emailJsResponse.statusText} - ${errorText}`);
-      }
-
-      setSubmitSuccess(true);
-      setContactForm({ name: '', whatsapp: '' });
-      setTimeout(() => setSubmitSuccess(false), 5000);
-    } catch (error) {
-      console.error("Erro no processo de envio:", error);
-      setSubmitError("Erro ao processar. Tente novamente ou chame no WhatsApp.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   const scrollToSection = (id) => {
     if (currentView !== 'home') {
