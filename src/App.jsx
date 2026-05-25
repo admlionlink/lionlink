@@ -23,7 +23,7 @@ import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
 import CaseStudyPage from './components/CaseStudyPage';
 import portfolioItems from './data/portfolioItems';
 
-const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER;
+const WHATSAPP_NUMBER = '5511997519233';
 
 const LionLinkLanding = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
