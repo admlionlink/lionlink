@@ -41,6 +41,20 @@ const portfolioItems = {
       "Retenção de 95% de pacientes",
     ],
   },
+  credicliente: {
+    title: "CrediCliente",
+    tag: "FINANCEIRO",
+    img: "https://credicliente.com.br/assets/hero-family-DPeLNPt_.jpg",
+    siteUrl: "https://credicliente.com.br",
+    challenge: "Pouca visibilidade digital. Sem site otimizado, sem presença no Google e sem estratégia para captar clientes de crédito pessoal online.",
+    solution: "Desenvolvemos site de alta conversão + estrutura de tráfego pago focada em leads qualificados, com landing pages segmentadas por produto de crédito.",
+    resultsList: [
+      "+100% de leads gerados por mês",
+      "Site novo com foco em conversão de crédito",
+      "Campanhas ativas no Google Ads e Meta Ads",
+      "Presença digital consolidada no setor financeiro",
+    ],
+  },
 };
 
 export default portfolioItems;

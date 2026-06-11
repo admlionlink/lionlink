@@ -133,7 +133,7 @@ const LionLinkLanding = () => {
       ) : (
         <>
           {/* HERO */}
-          <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gray-50">
+          <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 bg-gray-50">
             <div className="absolute top-0 right-0 w-1/2 h-full bg-[#f5d10d]/5 rounded-bl-[100px] -z-10 hidden lg:block"></div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -176,22 +176,24 @@ const LionLinkLanding = () => {
                     loading="lazy"
                     className="relative rounded-2xl shadow-2xl border-4 border-white w-full object-cover h-[500px]"
                   />
-                  <div className="absolute -bottom-8 -left-8 bg-[#181818] p-4 rounded-2xl shadow-2xl border border-gray-800 flex items-center gap-4 animate-bounce-slow font-title">
-                    <div className="bg-green-500/20 p-3 rounded-full text-green-400">
-                      <TrendingUp size={24} />
+                  {/* Badge inferior — dentro da imagem em mobile, fora em desktop */}
+                  <div className="absolute bottom-4 left-4 lg:-bottom-8 lg:-left-8 bg-[#181818] p-3 lg:p-4 rounded-2xl shadow-2xl border border-gray-800 flex items-center gap-3 animate-bounce-slow font-title">
+                    <div className="bg-green-500/20 p-2 lg:p-3 rounded-full text-green-400">
+                      <TrendingUp size={20} />
                     </div>
                     <div>
                       <p className="text-xs text-gray-400 font-bold uppercase tracking-wider">Crescimento</p>
-                      <p className="text-lg font-bold text-white">Escala Previsível</p>
+                      <p className="text-sm lg:text-lg font-bold text-white">Escala Previsível</p>
                     </div>
                   </div>
-                  <div className="absolute top-10 -right-8 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-2xl border border-gray-100 flex items-center gap-4 animate-bounce-delayed hidden md:flex font-title">
-                    <div className="bg-[#f5d10d]/20 p-3 rounded-full text-[#020202]">
-                      <Settings size={24} />
+                  {/* Badge superior — oculto em mobile, dentro em tablet, fora em desktop */}
+                  <div className="absolute top-4 right-4 lg:top-10 lg:-right-8 bg-white/95 backdrop-blur-sm p-3 lg:p-4 rounded-2xl shadow-2xl border border-gray-100 items-center gap-3 animate-bounce-delayed hidden md:flex font-title">
+                    <div className="bg-[#f5d10d]/20 p-2 lg:p-3 rounded-full text-[#020202]">
+                      <Settings size={20} />
                     </div>
                     <div>
                       <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">Operação</p>
-                      <p className="text-lg font-bold text-[#020202]">100% Automatizada</p>
+                      <p className="text-sm lg:text-lg font-bold text-[#020202]">100% Automatizada</p>
                     </div>
                   </div>
                 </div>
@@ -373,11 +375,12 @@ const LionLinkLanding = () => {
               <div className="mb-12">
                 <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-2 font-title">Resultados que vão além de marketing</h2>
               </div>
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   { id: 'diferencial', tag: 'SERVIÇOS', tagColor: 'bg-blue-100 text-blue-800', img: "https://lionlink-nine.vercel.app/Diferencial-Contabilidade.webp", alt: "Diferencial Contábil", title: "Diferencial Contábil", desc: "Implementação de WhatsApp Centralizado + CRM para equipe de 15 pessoas.", metric: "80% das msgs < 2h" },
                   { id: 'shekinah', tag: 'SAÚDE', tagColor: 'bg-green-100 text-green-800', img: "https://lionlink-nine.vercel.app/Clinica-Shekinah.webp", alt: "Clínica Shekinah", title: "Clínica Shekinah", desc: "Chatbot + CRM + Campanhas Integradas para clínica de saúde.", metric: "+145% leads/mês" },
                   { id: 'arouca', tag: 'SAÚDE', tagColor: 'bg-green-100 text-green-800', img: "https://lionlink-nine.vercel.app/Psicologo-Andre-Arouca.webp", alt: "Dr. André Arouca", title: "Dr. André Arouca", desc: "Expansão Digital + Automação de Follow-up para consultório.", metric: "10x mais pacientes" },
+                  { id: 'credicliente', tag: 'FINANCEIRO', tagColor: 'bg-yellow-100 text-yellow-800', img: "https://credicliente.com.br/assets/hero-family-DPeLNPt_.jpg", alt: "CrediCliente", title: "CrediCliente", desc: "Site de alta conversão + tráfego pago para empresa de crédito pessoal.", metric: "+100% leads/mês" },
                 ].map(({ id, tag, tagColor, img, alt, title, desc, metric }) => (
                   <div
                     key={id}
