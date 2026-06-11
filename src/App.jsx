@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   MapPin,
   Globe,
@@ -32,15 +32,6 @@ const LionLinkLanding = () => {
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const [isQrOpen, setIsQrOpen] = useState(false);
   const [qrLink, setQrLink] = useState('');
-
-  useEffect(() => {
-    const existing = document.querySelector("link[rel*='icon']");
-    const link = existing || document.createElement('link');
-    link.type = 'image/svg+xml';
-    link.rel = 'icon';
-    link.href = 'https://lionlink-nine.vercel.app/lionicon.svg';
-    if (!existing) document.head.appendChild(link);
-  }, []);
 
   const scrollToSection = (id) => {
     if (currentView !== 'home') {
