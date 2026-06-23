@@ -83,7 +83,7 @@ const LionLinkLanding = () => {
               <button onClick={() => scrollToSection('processo')} className="text-[#181818] hover:text-[#d8b10e] font-medium transition-colors">Como Funciona</button>
               <button onClick={() => scrollToSection('solucoes')} className="text-[#181818] hover:text-[#d8b10e] font-medium transition-colors">Infraestrutura</button>
               <button onClick={() => scrollToSection('parceria')} className="text-[#181818] hover:text-[#d8b10e] font-medium transition-colors">A Parceria</button>
-              <button onClick={() => scrollToSection('contato')} className="bg-[#020202] text-[#f5d10d] px-6 py-2.5 rounded-full font-bold hover:bg-[#181818] transition-all shadow-lg hover:shadow-[#f5d10d]/20 flex items-center gap-2 border border-[#f5d10d]/20 font-title tracking-wide">
+              <button onClick={() => scrollToSection('contato')} className="bg-[#020202] text-[#f5d10d] px-6 py-2.5 rounded-full font-bold hover:bg-[#181818] transition-all shadow-lg hover:shadow-[#f5d10d]/20 flex items-center gap-2 border border-[#f5d10d]/20 font-title tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5d10d] focus-visible:ring-offset-2">
                 Agendar Análise
               </button>
             </div>
@@ -91,7 +91,7 @@ const LionLinkLanding = () => {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
-                className="text-[#020202]"
+                className="text-[#020202] p-2.5 -mr-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5d10d] focus-visible:ring-offset-2"
               >
                 {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
@@ -156,10 +156,10 @@ const LionLinkLanding = () => {
                     Não somos só agência. Somos parceiros que analisam seu negócio como um todo e implementam soluções digitais que automatizam processos, centralizam operações e geram resultados mensuráveis.
                   </p>
                   <div className="animate-fade-in-up flex flex-col sm:flex-row gap-4 pt-2 font-title" style={{ animationDelay: '0.42s' }}>
-                    <button onClick={() => scrollToSection('contato')} className="bg-[#f5d10d] text-[#020202] px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#d8b10e] transition-all shadow-xl hover:shadow-[#f5d10d]/30 flex items-center justify-center gap-2 group tracking-wide">
+                    <button onClick={() => scrollToSection('contato')} className="bg-[#f5d10d] text-[#020202] px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#d8b10e] transition-all shadow-xl hover:shadow-[#f5d10d]/30 flex items-center justify-center gap-2 group tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#020202] focus-visible:ring-offset-2">
                       Agendar uma Análise Gratuita <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <button onClick={() => scrollToSection('solucoes')} className="bg-white text-[#020202] border-2 border-gray-200 px-8 py-4 rounded-xl font-bold text-lg hover:border-[#f5d10d] hover:bg-[#f5d10d]/5 transition-all flex items-center justify-center gap-2 tracking-wide">
+                    <button onClick={() => scrollToSection('solucoes')} className="bg-white text-[#020202] border-2 border-gray-200 px-8 py-4 rounded-xl font-bold text-lg hover:border-[#f5d10d] hover:bg-[#f5d10d]/5 transition-all flex items-center justify-center gap-2 tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5d10d] focus-visible:ring-offset-2">
                       Ver Soluções
                     </button>
                   </div>
@@ -327,7 +327,7 @@ const LionLinkLanding = () => {
                   <p className="text-lg text-gray-300 font-body mb-8 leading-relaxed">
                     Pense na Lion Link como aquele <strong>amigo experiente que pega na sua mão</strong> para te ajudar a atravessar uma rua movimentada. Tiramos o peso do digital das suas costas, automatizamos o que precisa ser rápido e criamos caminhos para você faturar mais.
                   </p>
-                  <button onClick={handleCtaClick} className="bg-[#f5d10d] text-[#020202] px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#d8b10e] transition-all shadow-lg flex items-center gap-2 font-title tracking-wide w-fit">
+                  <button onClick={handleCtaClick} className="bg-[#f5d10d] text-[#020202] px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#d8b10e] transition-all shadow-lg flex items-center gap-2 font-title tracking-wide w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#020202]">
                     Tomar um café com a gente <ArrowRight size={20} />
                   </button>
                 </div>
@@ -375,8 +375,13 @@ const LionLinkLanding = () => {
                     role="button"
                     tabIndex={0}
                     aria-label={`Ver case de sucesso: ${title}`}
-                    onKeyDown={(e) => e.key === 'Enter' && openCaseStudy(id)}
-                    className="bg-white rounded-3xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col group"
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openCaseStudy(id);
+                      }
+                    }}
+                    className="bg-white rounded-3xl shadow-lg cursor-pointer transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5d10d] focus-visible:ring-offset-2"
                   >
                     <div className="h-48 overflow-hidden relative">
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
@@ -408,7 +413,7 @@ const LionLinkLanding = () => {
                 <p className="text-gray-400 text-lg mb-8 font-body">Agende uma análise digital gratuita com nosso time. Vamos entender seu negócio, identificar oportunidades e traçar um plano concreto de crescimento lado a lado.</p>
                 <button
                   onClick={handleCtaClick}
-                  className="w-full bg-[#f5d10d] text-[#020202] px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#d8b10e] transition-all shadow-lg flex items-center justify-center font-title tracking-wide"
+                  className="w-full bg-[#f5d10d] text-[#020202] px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#d8b10e] transition-all shadow-lg flex items-center justify-center font-title tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#020202]"
                 >
                   Agendar Análise Gratuita
                 </button>
