@@ -3,7 +3,7 @@ const portfolioItems = {
     title: "Diferencial Contábil",
     tag: "SERVIÇOS",
     img: "https://lionlink-nine.vercel.app/Diferencial-Contabilidade.webp",
-    siteUrl: "https://diferencialcontabilidade.com.br",
+    siteUrl: "https://dcontabil.com",
     challenge: "15 atendentes espalhados em 5 departamentos. Cada um com seu WhatsApp. Clientes não sabiam para onde ligar. Dados perdidos em conversas.",
     solution: "Implementamos WhatsApp centralizado com Chatwoot + CRM integrado + automações para qualificação de leads.",
     resultsList: [
@@ -31,7 +31,7 @@ const portfolioItems = {
     title: "Dr. André Arouca",
     tag: "SAÚDE",
     img: "https://lionlink-nine.vercel.app/Psicologo-Andre-Arouca.webp",
-    siteUrl: "https://andrearouca.com.br",
+    siteUrl: "https://andrearouca.com",
     challenge: "Consultório pequeno. Crescimento limitado. Dependência de indicações.",
     solution: "Implementamos WhatsApp integrado, CRM com histórico de pacientes, e campanhas de follow-up automatizadas.",
     resultsList: [
