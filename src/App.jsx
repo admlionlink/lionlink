@@ -23,7 +23,7 @@ import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
 import CaseStudyPage from './components/CaseStudyPage';
 import portfolioItems from './data/portfolioItems';
 
-const WHATSAPP_NUMBER = '5511997519233';
+const WHATSAPP_NUMBER = '5511912157087';
 
 const LionLinkLanding = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,12 +64,7 @@ const LionLinkLanding = () => {
   };
 
   return (
-    <div className="bg-white" style={{ fontFamily: "'Inter', sans-serif", color: "#020202" }}>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@700;900&display=swap');
-        .font-title { font-family: 'Outfit', sans-serif; }
-        .font-body { font-family: 'Inter', sans-serif; }
-      `}</style>
+    <div className="bg-white font-body" style={{ color: "#020202" }}>
 
       {/* NAV */}
       <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
@@ -124,22 +119,43 @@ const LionLinkLanding = () => {
       ) : (
         <>
           {/* HERO */}
-          <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 bg-gray-50">
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-[#f5d10d]/5 rounded-bl-[100px] -z-10 hidden lg:block"></div>
+          <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-32 bg-[#fafaf8] overflow-hidden">
+            <div
+              className="absolute inset-0 -z-10"
+              style={{
+                backgroundImage: 'radial-gradient(circle, rgba(2,2,2,0.08) 1px, transparent 1px)',
+                backgroundSize: '24px 24px',
+              }}
+            ></div>
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#020202] via-[#f5d10d] to-[#020202]"></div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="space-y-8 animate-fade-in-up">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#f5d10d]/10 text-[#020202] rounded-full text-sm font-bold border border-[#f5d10d]/20 font-title tracking-wider">
-                    <span className="w-2 h-2 bg-[#f5d10d] rounded-full animate-pulse"></span>Especialistas em Escalar Negócios
+              <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
+                <div className="space-y-7">
+                  <div className="animate-fade-in-up flex items-center gap-3 font-body">
+                    <span className="h-px w-10 bg-[#020202]"></span>
+                    <span className="text-xs font-bold uppercase tracking-[3px] text-[#020202]">Especialistas em Escalar Negócios</span>
                   </div>
-                  <h1 className="text-5xl lg:text-6xl xl:text-7xl font-title font-black text-[#020202] leading-[1.1]">
-                    Sua empresa completa no <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d8b10e] to-[#f5d10d]">digital.</span><br />
-                    <span className="text-3xl lg:text-4xl text-gray-800">Infraestrutura, automação e marketing integrados.</span>
+                  <h1 className="font-title text-[#020202]" style={{ animationDelay: '0.1s' }}>
+                    <span className="animate-fade-in-up block text-4xl sm:text-5xl lg:text-6xl xl:text-[4.75rem] font-black leading-[1.05]" style={{ animationDelay: '0.1s' }}>
+                      Sua empresa completa
+                    </span>
+                    <span className="animate-fade-in-up block text-4xl sm:text-5xl lg:text-6xl xl:text-[4.75rem] font-black leading-[1.05]" style={{ animationDelay: '0.18s' }}>
+                      no{' '}
+                      <span className="relative inline-block text-[#020202]">
+                        digital.
+                        <svg className="absolute left-0 -bottom-1 w-full h-3 origin-left animate-draw-line" viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true">
+                          <path d="M2 9 C 50 2, 150 2, 198 9" stroke="#f5d10d" strokeWidth="6" fill="none" strokeLinecap="round" />
+                        </svg>
+                      </span>
+                    </span>
+                    <span className="animate-fade-in-up font-body block text-xl lg:text-2xl font-normal text-gray-600 mt-4" style={{ animationDelay: '0.26s' }}>
+                      Infraestrutura, automação e marketing integrados — sem pular nenhuma etapa.
+                    </span>
                   </h1>
-                  <p className="text-lg lg:text-xl text-gray-600 max-w-lg leading-relaxed font-body">
-                    Não somos só agência. Somos partners que analisam seu negócio como um todo e implementam soluções digitais que automatizam processos, centralizam operações e geram resultados mensuráveis.
+                  <p className="animate-fade-in-up text-lg text-gray-600 max-w-lg leading-relaxed font-body" style={{ animationDelay: '0.34s' }}>
+                    Não somos só agência. Somos parceiros que analisam seu negócio como um todo e implementam soluções digitais que automatizam processos, centralizam operações e geram resultados mensuráveis.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 pt-4 font-title">
+                  <div className="animate-fade-in-up flex flex-col sm:flex-row gap-4 pt-2 font-title" style={{ animationDelay: '0.42s' }}>
                     <button onClick={() => scrollToSection('contato')} className="bg-[#f5d10d] text-[#020202] px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#d8b10e] transition-all shadow-xl hover:shadow-[#f5d10d]/30 flex items-center justify-center gap-2 group tracking-wide">
                       Agendar uma Análise Gratuita <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                     </button>
@@ -147,44 +163,30 @@ const LionLinkLanding = () => {
                       Ver Soluções
                     </button>
                   </div>
-                  <div className="flex items-center gap-4 text-sm text-gray-500 pt-4 font-body">
-                    <div className="flex -space-x-2">
-                      {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className="w-8 h-8 rounded-full bg-gray-300 border-2 border-white overflow-hidden">
-                          <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="" loading="lazy" />
-                        </div>
-                      ))}
-                    </div>
-                    <p>Junte-se a +30 empresas aceleradas.</p>
-                  </div>
                 </div>
 
-                <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-[#f5d10d] to-[#d8b10e] rounded-2xl blur-2xl opacity-20"></div>
+                <div className="relative animate-frame-reveal">
+                  <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[#020202] rounded-2xl -z-10 hidden sm:block"></div>
                   <img
                     src="https://lionlink-nine.vercel.app/lion%20link%20-%20homem%20ao%20celular.webp"
                     alt="Profissional utilizando celular — Lion Link"
                     loading="lazy"
-                    className="relative rounded-2xl shadow-2xl border-4 border-white w-full object-cover h-[500px]"
+                    className="relative rounded-2xl shadow-xl border-4 border-[#f5d10d] w-full object-cover h-[440px] lg:h-[540px]"
                   />
                   {/* Badge inferior — dentro da imagem em mobile, fora em desktop */}
-                  <div className="absolute bottom-4 left-4 lg:-bottom-8 lg:-left-8 bg-[#181818] p-3 lg:p-4 rounded-2xl shadow-2xl border border-gray-800 flex items-center gap-3 animate-bounce-slow font-title">
-                    <div className="bg-green-500/20 p-2 lg:p-3 rounded-full text-green-400">
-                      <TrendingUp size={20} />
-                    </div>
+                  <div className="absolute bottom-4 left-4 lg:-bottom-7 lg:-right-7 lg:left-auto bg-[#020202] p-3 lg:p-4 rounded-xl shadow-xl border-2 border-[#f5d10d] flex items-center gap-3 font-title">
+                    <TrendingUp className="text-[#f5d10d] shrink-0" size={20} />
                     <div>
-                      <p className="text-xs text-gray-400 font-bold uppercase tracking-wider">Crescimento</p>
-                      <p className="text-sm lg:text-lg font-bold text-white">Escala Previsível</p>
+                      <p className="text-[10px] text-gray-400 font-bold uppercase tracking-[2px]">Crescimento</p>
+                      <p className="text-sm lg:text-base font-bold text-white">Escala Previsível</p>
                     </div>
                   </div>
-                  {/* Badge superior — oculto em mobile, dentro em tablet, fora em desktop */}
-                  <div className="absolute top-4 right-4 lg:top-10 lg:-right-8 bg-white/95 backdrop-blur-sm p-3 lg:p-4 rounded-2xl shadow-2xl border border-gray-100 items-center gap-3 animate-bounce-delayed hidden md:flex font-title">
-                    <div className="bg-[#f5d10d]/20 p-2 lg:p-3 rounded-full text-[#020202]">
-                      <Settings size={20} />
-                    </div>
+                  {/* Badge superior — oculto em mobile, visível em tablet/desktop */}
+                  <div className="absolute top-4 right-4 lg:top-8 lg:-left-7 bg-[#f5d10d] p-3 lg:p-4 rounded-xl shadow-xl border-2 border-[#020202] items-center gap-3 hidden md:flex font-title">
+                    <Settings className="text-[#020202] shrink-0" size={20} />
                     <div>
-                      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">Operação</p>
-                      <p className="text-sm lg:text-lg font-bold text-[#020202]">100% Automatizada</p>
+                      <p className="text-[10px] text-[#020202]/60 font-bold uppercase tracking-[2px]">Operação</p>
+                      <p className="text-sm lg:text-base font-bold text-[#020202]">100% Automatizada</p>
                     </div>
                   </div>
                 </div>
@@ -286,33 +288,27 @@ const LionLinkLanding = () => {
               </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
-                  { icon: <Globe size={24} />, color: "blue", title: "Criação de Site Moderno", desc: "Sua vitrine 24h projetada para alta conversão.", items: ["Landing Pages ultra rápidas", "Copywriting focado em vendas", "100% otimizado para celulares"], ideal: "Captar leads e gerar autoridade" },
-                  { icon: <Target size={24} />, color: "red", title: "Anúncios Que Viram Clientes", desc: "Tráfego pago direto para quem quer comprar.", items: ["Google Ads (Busca por intenção)", "Meta Ads (Instagram e Facebook)", "Campanhas de Remarketing"], ideal: "Escala rápida e previsível" },
-                  { icon: <MapPin size={24} />, color: "green", title: "Apareça no Google Maps", desc: "Domine as buscas e seja a primeira escolha.", items: ["Ficha do Google otimizada", "Posicionamento no topo (SEO Local)", "Gestão de avaliações estratégicas"], ideal: "Clínicas, escritórios e negócios físicos" },
-                  { icon: <MessageCircle size={24} />, color: "whatsapp", title: "WhatsApp & Chatbots", desc: "Atendimento ágil, organizado e 24/7.", items: ["Vários atendentes no mesmo número", "Robôs de qualificação de leads", "Distribuição automática"], ideal: "Equipes de vendas e recepção" },
-                  { icon: <Database size={24} />, color: "purple", title: "CRM Integrado", desc: "Nunca mais perca o histórico de um lead.", items: ["Funil de vendas 100% visual", "Histórico salvo (WhatsApp e E-mail)", "Lembretes de follow-up"], ideal: "Gestão comercial e controle" },
-                  { icon: <Settings size={24} />, color: "orange", title: "Automações Customizadas", desc: "Máquinas trabalhando no piloto automático.", items: ["Fluxos personalizados para sua rotina", "Integração entre sistemas", "E-mails automatizados"], ideal: "Ganho de tempo e escala" },
-                ].map(({ icon, color, title, desc, items, ideal }) => {
-                  const colors = {
-                    blue: "bg-blue-100 text-blue-600 group-hover:bg-blue-600",
-                    red: "bg-red-100 text-red-600 group-hover:bg-red-600",
-                    green: "bg-green-100 text-green-600 group-hover:bg-green-600",
-                    whatsapp: "bg-[#25D366]/20 text-[#128C7E] group-hover:bg-[#25D366]",
-                    purple: "bg-purple-100 text-purple-600 group-hover:bg-purple-600",
-                    orange: "bg-orange-100 text-orange-600 group-hover:bg-orange-600",
-                  };
-                  return (
-                    <div key={title} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all group">
-                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:text-white transition-colors ${colors[color]}`}>{icon}</div>
-                      <h3 className="text-xl font-bold text-[#020202] mb-2 font-title">{title}</h3>
-                      <p className="text-sm font-semibold text-gray-500 mb-4">{desc}</p>
-                      <ul className="text-sm text-gray-600 space-y-2 mb-6 font-body">
-                        {items.map((i) => <li key={i}>• {i}</li>)}
-                      </ul>
-                      <p className="text-xs font-bold text-gray-400 uppercase tracking-wide">Ideal para: {ideal}</p>
-                    </div>
-                  );
-                })}
+                  { icon: <Globe size={22} />, title: "Criação de Site Moderno", desc: "Sua vitrine 24h projetada para alta conversão.", items: ["Landing Pages ultra rápidas", "Copywriting focado em vendas", "100% otimizado para celulares"], ideal: "Captar leads e gerar autoridade" },
+                  { icon: <Target size={22} />, title: "Anúncios Que Viram Clientes", desc: "Tráfego pago direto para quem quer comprar.", items: ["Google Ads (Busca por intenção)", "Meta Ads (Instagram e Facebook)", "Campanhas de Remarketing"], ideal: "Escala rápida e previsível" },
+                  { icon: <MapPin size={22} />, title: "Apareça no Google Maps", desc: "Domine as buscas e seja a primeira escolha.", items: ["Ficha do Google otimizada", "Posicionamento no topo (SEO Local)", "Gestão de avaliações estratégicas"], ideal: "Clínicas, escritórios e negócios físicos" },
+                  { icon: <MessageCircle size={22} />, title: "WhatsApp & Chatbots", desc: "Atendimento ágil, organizado e 24/7.", items: ["Vários atendentes no mesmo número", "Robôs de qualificação de leads", "Distribuição automática"], ideal: "Equipes de vendas e recepção" },
+                  { icon: <Database size={22} />, title: "CRM Integrado", desc: "Nunca mais perca o histórico de um lead.", items: ["Funil de vendas 100% visual", "Histórico salvo (WhatsApp e E-mail)", "Lembretes de follow-up"], ideal: "Gestão comercial e controle" },
+                  { icon: <Settings size={22} />, title: "Automações Customizadas", desc: "Máquinas trabalhando no piloto automático.", items: ["Fluxos personalizados para sua rotina", "Integração entre sistemas", "E-mails automatizados"], ideal: "Ganho de tempo e escala" },
+                ].map(({ icon, title, desc, items, ideal }, idx) => (
+                  <div key={title} className="relative bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-[#f5d10d]/50 transition-all overflow-hidden group">
+                    <span className="absolute -top-4 -right-2 font-title text-[5.5rem] font-black leading-none text-gray-50 group-hover:text-[#f5d10d]/10 transition-colors select-none pointer-events-none">
+                      {String(idx + 1).padStart(2, '0')}
+                    </span>
+                    <div className="absolute top-0 left-0 w-1 h-full bg-[#f5d10d] scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300"></div>
+                    <div className="relative w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-[#020202] text-[#f5d10d]">{icon}</div>
+                    <h3 className="relative text-xl font-bold text-[#020202] mb-2 font-title">{title}</h3>
+                    <p className="relative text-sm font-semibold text-gray-500 mb-4">{desc}</p>
+                    <ul className="relative text-sm text-gray-600 space-y-2 mb-6 font-body">
+                      {items.map((i) => <li key={i}>• {i}</li>)}
+                    </ul>
+                    <p className="relative text-xs font-bold text-gray-400 uppercase tracking-wide">Ideal para: {ideal}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
@@ -336,8 +332,8 @@ const LionLinkLanding = () => {
                   </button>
                 </div>
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-[#f5d10d] to-[#d8b10e] rounded-2xl blur-2xl opacity-20"></div>
-                  <div className="bg-[#181818] p-8 md:p-10 rounded-3xl border border-[#333] relative shadow-2xl">
+                  <div className="absolute -top-4 -right-4 w-full h-full border-2 border-[#f5d10d] rounded-3xl -z-0 hidden sm:block"></div>
+                  <div className="bg-[#181818] p-8 md:p-10 rounded-3xl border border-[#333] relative z-10 shadow-2xl">
                     <h3 className="text-2xl font-bold text-white mb-8 font-title flex items-center gap-3">
                       <Handshake className="text-[#f5d10d]" size={32} /> O que um verdadeiro parceiro faz:
                     </h3>

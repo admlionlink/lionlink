@@ -28,3 +28,6 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Brand source files (commercial fonts, raw identity assets — not for public redistribution)
+brand/
